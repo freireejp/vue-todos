@@ -2,6 +2,7 @@
 import { ref, watch, computed } from "vue";
 import { uid } from "uid";
 import { Icon } from "@iconify/vue";
+import draggable from "vuedraggable";
 
 import TodoCreator from "../components/TodoCreator.vue";
 import TodoItem from "../components/TodoItem.vue";
@@ -65,7 +66,7 @@ const deleteTodo = (todoId) => {
 <template>
   <main>
     <h1>Create Todo</h1>
-    <TodoCreator @create-todo="createTodo" />
+    <!-- <TodoCreator @create-todo="createTodo" />
     <ul class="todo-list" v-if="todoList.length > 0">
       <TodoItem
         v-for="(todo, index) in todoList"
@@ -77,6 +78,32 @@ const deleteTodo = (todoId) => {
         @delete-todo="deleteTodo"
       />
     </ul>
+    <p class="todos-msg" v-else>
+      <Icon icon="noto-v1:sad-but-relieved-face" width="22" />
+      <span>You have no todo's to complete. Add one.</span>
+    </p>
+    <p v-if="todoCompleted && todoList.length > 0" class="todos-msg">
+      <Icon icon="noto-v1:party-popper" />
+      <span>You have completed all your todos!</span>
+    </p> -->
+
+    <TodoCreator @create-todo="createTodo" />
+
+    <draggable v-model="todoList" item-key="id" v-if="todoList.length > 0">
+      <template #item="{ element, index }">
+        <ul class="todo-list">
+          <TodoItem
+            :key="element.id"
+            :todo="element"
+            :index="index"
+            @toggle-complete="toggleTodoComplete"
+            @edit-todo="toggleEditTodo"
+            @update-todo="updateTodo"
+            @delete-todo="deleteTodo"
+          />
+        </ul>
+      </template>
+    </draggable>
     <p class="todos-msg" v-else>
       <Icon icon="noto-v1:sad-but-relieved-face" width="22" />
       <span>You have no todo's to complete. Add one.</span>
