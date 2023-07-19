@@ -1,29 +1,11 @@
-# todos
+# Vue Todos
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to my task management application! Developed with enthusiasm and dedication, this project was created based on a YouTube tutorial by John Komarnicki.
 
-## Recommended IDE Setup
+With this application, you can efficiently organize your daily tasks and have complete control over your activities. Stay productive, prioritize your goals, and enjoy the satisfaction of completing your tasks.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+The intuitive and user-friendly interface makes it easy to add new tasks.
 
-## Customize configuration
+Additionally, the application allows you to mark tasks as completed, update their statuses, and delete them when needed. This way, you'll always have a clear view of your progress and what still needs to be done.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+Make the most of all the features offered by the application and make your routine more efficient and productive.
