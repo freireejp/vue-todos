@@ -17,6 +17,7 @@ defineEmits(["toggle-complete", "edit-todo", "update-todo", "delete-todo"]);
 
 <template>
   <li>
+    <Icon icon="carbon:drag-vertical" color="#858484" width="22" height="22" />
     <input
       type="checkbox"
       :checked="todo.isCompleted"
